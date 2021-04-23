@@ -1,0 +1,14 @@
+# headless master svc
+apiVersion: v1
+kind: Service
+metadata:
+  name: condor-internal
+spec:
+  selector:
+    app: condor-notebook
+  clusterIP: None
+  ports:
+  - name: condor-internal
+    port: 9618
+    targetPort: 9618
+    protocol: TCP

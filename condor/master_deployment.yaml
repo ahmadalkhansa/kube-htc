@@ -1,0 +1,53 @@
+# master deployment
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: master
+  labels:
+    name: master
+spec:
+  selector:
+    matchLabels:
+      app: master
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: master
+    spec:
+      affinity:
+        nodeAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+            nodeSelectorTerms:
+            - matchExpressions:
+              - key: k3s.io/hostname
+                operator: In
+                values:
+                - k3s-htc.novalocal 
+      containers:
+      - name: master
+        imagePullPolicy: Always
+        image: "htcondor/base:8.9.7-el7"
+        # command: ["/bin/sh", "-c", "cp /home/startc.sh / && chmod +x /startc.sh && /startc.sh"]
+        volumeMounts:
+          - mountPath: "/etc/condor/config.d/" # 51-role-cm
+            name: master
+            # subPath: 51-role-cm
+          # - mountPath: "/home"
+          #  name: condor
+        ports:
+        - containerPort: 9618
+        securityContext:
+          privileged: true
+        env:
+        - name: MY_POD_IP
+          valueFrom:
+            fieldRef:
+              fieldPath: status.podIP
+      volumes:
+      - name: master
+        configMap:
+          name: master
+      # - name: condor
+      #  persistentVolumeClaim:
+      #    claimName: condor

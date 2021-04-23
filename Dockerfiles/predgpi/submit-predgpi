@@ -1,0 +1,11 @@
+Universe = docker
+docker_image = 2281995/mapo-predgpi
+Error = error
+Output = output
+Log = log
+should_transfer_files   = YES
+transfer_input_files = input
+transfer_output_files = volume
+when_to_transfer_output = ON_EXIT_OR_EVICT
+initialdir = /home/jovyan/work/experimental
+queue 1

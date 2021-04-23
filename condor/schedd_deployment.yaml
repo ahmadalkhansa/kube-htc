@@ -1,0 +1,51 @@
+# chedd deployment
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: schedd
+  labels:
+    name: schedd
+spec:
+  selector:
+    matchLabels:
+      app: schedd
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: schedd
+    spec:
+      affinity:
+        nodeAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+            nodeSelectorTerms:
+            - matchExpressions:
+              - key: k3s.io/hostname
+                operator: In
+                values:
+                - k3s-htc.novalocal 
+      containers:
+      - name: schedd
+        imagePullPolicy: Always
+        image: "htcondor/base:8.9.7-el7"
+        # command: ["/bin/sh", "-c", "cp /home/submissions/startc.sh / && chmod +x /startc.sh && /startc.sh"]
+        volumeMounts:
+          - mountPath: "/etc/condor/config.d/" # 51-role-submit
+            name: schedd
+           # subPath: 51-role-submit
+         # - mountPath: "/home"
+         #   name: condor
+        # env:
+        # - name: _condor_SCHEDD_HOST
+        #  value: schedd.default.svc.cluster.local
+        ports:
+        - containerPort: 9618
+        securityContext:
+          privileged: true
+      volumes:
+      - name: schedd
+        configMap:
+          name: schedd
+      # - name: condor
+      #   persistentVolumeClaim:
+      #    claimName: condor

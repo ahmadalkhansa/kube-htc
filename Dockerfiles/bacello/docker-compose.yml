@@ -1,0 +1,25 @@
+version: '3.4'
+services:
+        psi_blast:
+                build: ./pre_process
+                container_name: psi_blast
+                environment:
+                        - INPUT_DIR="${INPUT_DIR}"
+                volumes:
+                        - another-volume:${INPUT_DIR}
+        bacello:
+                build: ./bac_app
+                container_name: bacello
+                environment:
+                        - INPUT_DIR="${INPUT_DIR}"
+                volumes:
+                        - another-volume:${INPUT_DIR}
+                        - /var/run/docker.sock:/var/run/docker.sock
+volumes:
+        another-volume:
+                driver: local
+                driver_opts:
+                        type: none
+                        device: ${INPUT_PATH} #mapping INPUT_PATH to name-volume in the SOURCE directory on container
+                        o: bind
+

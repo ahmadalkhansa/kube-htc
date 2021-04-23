@@ -1,0 +1,102 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: prometheus-config
+data:
+  prometheus.yml: |
+
+    global:
+      scrape_interval: 30s
+
+    rule_files:
+      - alerts.yml
+      - records.yml
+
+    scrape_configs:
+      - job_name: 'schedd-exporter'
+        static_configs:
+        - targets:
+          - 131.154.97.69:32747
+      - job_name: 'kubernetes-apiservers'
+        kubernetes_sd_configs:
+        - role: endpoints
+        scheme: https
+        tls_config:
+            ca_file: /var/run/secrets/kubernetes.io/serviceaccount/ca.crt
+        bearer_token_file: /var/run/secrets/kubernetes.io/serviceaccount/token
+        relabel_configs:
+        - source_labels: [__meta_kubernetes_namespace, __meta_kubernetes_service_name, __meta_kubernetes_endpoint_port_name]
+          action: keep
+          regex: default;kubernetes;https
+      - job_name: 'kubernetes-nodes'
+        scheme: https
+        tls_config:
+            ca_file: /var/run/secrets/kubernetes.io/serviceaccount/ca.crt
+        bearer_token_file: /var/run/secrets/kubernetes.io/serviceaccount/token
+        kubernetes_sd_configs:
+        - role: node
+        relabel_configs:
+        - action: labelmap
+          regex: __meta_kubernetes_node_label_(.+)
+      - job_name: 'kubernetes-cadvisor'
+        scheme: https
+        metrics_path: /metrics/cadvisor
+        tls_config:
+            ca_file: /var/run/secrets/kubernetes.io/serviceaccount/ca.crt
+        bearer_token_file: /var/run/secrets/kubernetes.io/serviceaccount/token
+        kubernetes_sd_configs:
+        - role: node
+        relabel_configs:
+        - action: labelmap
+          regex: __meta_kubernetes_node_label_(.+)
+        #      - job_name: 'kubernetes-service-endpoints'
+        #        kubernetes_sd_configs:
+        #        - role: endpoints
+        #        relabel_configs:
+        #        - action: labelmap
+        #          regex: __meta_kubernetes_service_label_(.+)
+        #        - source_labels: [__meta_kubernetes_namespace]
+        #          action: replace
+        #          target_label: kubernetes_namespace
+        #        - source_labels: [__meta_kubernetes_service_name]
+        #          action: replace
+        #          target_label: kubernetes_name
+      - job_name: 'kubernetes-pods'
+        kubernetes_sd_configs:
+        - role: pod
+        relabel_configs:
+        - action: labelmap
+          regex: __meta_kubernetes_pod_label_(.+)
+        - source_labels: [__meta_kubernetes_namespace]
+          action: replace
+          target_label: kubernetes_namespace
+        - source_labels: [__meta_kubernetes_pod_name]
+          action: replace
+          target_label: kubernetes_pod_name
+    alerting:
+      alertmanagers:
+       - kubernetes_sd_configs:
+         - role: endpoints
+         scheme: http
+         
+
+
+  alerts.yml: |
+    groups: 
+      - name: node_memory
+        rules:
+        - alert: node_memory_warning
+          expr: node_memory_percentage > 80
+          for: 1m
+          labels:
+            severity: page
+          annotations:
+            summary: "{{ $labels.instance }} memory is above 80%"
+            description: "{{ $labels.instance }} memory is above 80%"
+    
+  records.yml: |
+    groups:
+      - name: node_memory_percentage
+        rules:
+        - record: node_memory_percentage
+          expr: (container_memory_working_set_bytes{id="/",job!="docker-cadvisor"} / container_spec_memory_limit_bytes{id="/",job!="docker-cadvisor"}) * 100

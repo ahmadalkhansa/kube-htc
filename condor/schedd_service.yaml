@@ -1,0 +1,14 @@
+# headless master svc
+apiVersion: v1
+kind: Service
+metadata:
+  name: schedd
+spec:
+  clusterIP: None
+  selector:
+    app: schedd
+  ports:
+  - name: schedd
+    port: 9618
+    targetPort: 9618
+    protocol: TCP

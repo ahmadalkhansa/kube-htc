@@ -1,0 +1,63 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: grafana
+spec:
+  selector:
+    matchLabels:
+      app: grafana
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: grafana
+    spec:
+      affinity:
+        nodeAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+            nodeSelectorTerms:
+            - matchExpressions:
+              - key: k3s.io/hostname
+                operator: In
+                values:
+                - k3s-htc.novalocal
+      containers:
+      - name: grafana
+        image: grafana/grafana
+        ports:
+        - containerPort: 3000
+          name: default
+        volumeMounts:
+        - name: storage-volume
+          mountPath: /var/lib/grafana
+        - name: prometheus-datasource
+          mountPath: /usr/share/grafana/conf/provisioning/datasources
+        - name: key
+          mountPath: /etc/grafana/tls.key
+          subPath: tls.key
+          readOnly: true
+        - name: cert
+          mountPath: /etc/grafana/tls.crt
+          subPath: tls.crt
+          readOnly: true
+        - name: grafana-config
+          mountPath: /etc/grafana/grafana.ini
+          subPath: grafana.ini
+      volumes:
+      - name: storage-volume
+        persistentVolumeClaim:
+          claimName: grafana
+      - name: prometheus-datasource
+        configMap:
+         name: grafana-datasource
+      - name: key
+        secret:
+         secretName: grafana
+         defaultMode: 0777
+      - name: cert
+        secret:
+         secretName: grafana
+         defaultMode: 0777
+      - name: grafana-config
+        configMap:
+         name: grafana-config

@@ -1,0 +1,7 @@
+universe = docker
+docker_image = hello-world
+output = output
+log = log
+error = error
+initial_dir = /home/jovyan/work/experimental
+queue 1

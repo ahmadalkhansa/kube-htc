@@ -1,0 +1,262 @@
+000 (172.000.000) 2021-02-05 13:59:01 Job submitted from host: <10.42.0.73:9618?addrs=10.42.0.73-9618&alias=condor-notebook-75c45c4cbb-lmdmq&noUDP&sock=schedd_17_3d33>
+...
+040 (172.000.000) 2021-02-05 13:59:03 Started transferring input files
+	Transferring to host: <10.42.1.237:9618?addrs=10.42.1.237-9618&alias=worker-dcff657f-fcjg4&noUDP&sock=slot1_55_809b_3>
+...
+001 (172.000.000) 2021-02-05 13:59:03 Job executing on host: <10.42.1.237:9618?addrs=10.42.1.237-9618&alias=worker-dcff657f-fcjg4&noUDP&sock=startd_22_ab2c>
+...
+040 (172.000.000) 2021-02-05 13:59:03 Finished transferring input files
+...
+006 (172.000.000) 2021-02-05 13:59:13 Image size of job updated: 251200
+	36  -  MemoryUsage of job (MB)
+	36784  -  ResidentSetSize of job (KB)
+...
+006 (172.000.000) 2021-02-05 14:04:08 Image size of job updated: 2542160
+	36  -  MemoryUsage of job (MB)
+	36784  -  ResidentSetSize of job (KB)
+...
+040 (172.000.000) 2021-02-05 14:04:08 Started transferring output files
+...
+040 (172.000.000) 2021-02-05 14:04:08 Finished transferring output files
+...
+005 (172.000.000) 2021-02-05 14:04:08 Job terminated.
+	(1) Normal termination (return value 0)
+		Usr 0 00:04:49, Sys 0 00:00:05  -  Run Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Run Local Usage
+		Usr 0 00:04:49, Sys 0 00:00:05  -  Total Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Total Local Usage
+	6680631  -  Run Bytes Sent By Job
+	11557  -  Run Bytes Received By Job
+	6680631  -  Total Bytes Sent By Job
+	11557  -  Total Bytes Received By Job
+	Partitionable Resources :    Usage  Request Allocated 
+	   Cpus                 :     0.94        1         1 
+	   Disk (KB)            :  6538          15  16068730 
+	   Memory (MB)          :    36           1      1955 
+
+	Job terminated of its own accord at 2021-02-05T14:04:08Z.
+...
+000 (173.000.000) 2021-02-05 15:06:23 Job submitted from host: <10.42.0.73:9618?addrs=10.42.0.73-9618&alias=condor-notebook-75c45c4cbb-lmdmq&noUDP&sock=schedd_17_3d33>
+...
+040 (173.000.000) 2021-02-05 15:06:26 Started transferring input files
+	Transferring to host: <10.42.1.237:9618?addrs=10.42.1.237-9618&alias=worker-dcff657f-fcjg4&noUDP&sock=slot1_55_809b_4>
+...
+001 (173.000.000) 2021-02-05 15:06:26 Job executing on host: <10.42.1.237:9618?addrs=10.42.1.237-9618&alias=worker-dcff657f-fcjg4&noUDP&sock=startd_22_ab2c>
+...
+040 (173.000.000) 2021-02-05 15:06:26 Finished transferring input files
+...
+006 (173.000.000) 2021-02-05 15:06:36 Image size of job updated: 187544
+	38  -  MemoryUsage of job (MB)
+	38752  -  ResidentSetSize of job (KB)
+...
+000 (174.000.000) 2021-02-05 15:08:45 Job submitted from host: <10.42.0.73:9618?addrs=10.42.0.73-9618&alias=condor-notebook-75c45c4cbb-lmdmq&noUDP&sock=schedd_17_3d33>
+...
+040 (174.000.000) 2021-02-05 15:08:45 Started transferring input files
+	Transferring to host: <10.42.1.239:9618?addrs=10.42.1.239-9618&alias=worker-dcff657f-lj8p4&noUDP&sock=slot1_55_809b_3>
+...
+001 (174.000.000) 2021-02-05 15:08:45 Job executing on host: <10.42.1.239:9618?addrs=10.42.1.239-9618&alias=worker-dcff657f-lj8p4&noUDP&sock=startd_22_ab2c>
+...
+040 (174.000.000) 2021-02-05 15:08:45 Finished transferring input files
+...
+000 (175.000.000) 2021-02-05 15:08:46 Job submitted from host: <10.42.0.73:9618?addrs=10.42.0.73-9618&alias=condor-notebook-75c45c4cbb-lmdmq&noUDP&sock=schedd_17_3d33>
+...
+006 (174.000.000) 2021-02-05 15:08:56 Image size of job updated: 182876
+	33  -  MemoryUsage of job (MB)
+	33748  -  ResidentSetSize of job (KB)
+...
+040 (175.000.000) 2021-02-05 15:09:05 Started transferring input files
+	Transferring to host: <10.42.1.240:9618?addrs=10.42.1.240-9618&alias=worker-dcff657f-7shd4&noUDP&sock=slot1_55_809b_2>
+...
+001 (175.000.000) 2021-02-05 15:09:05 Job executing on host: <10.42.1.240:9618?addrs=10.42.1.240-9618&alias=worker-dcff657f-7shd4&noUDP&sock=startd_22_ab2c>
+...
+040 (175.000.000) 2021-02-05 15:09:05 Finished transferring input files
+...
+006 (175.000.000) 2021-02-05 15:09:15 Image size of job updated: 146352
+	35  -  MemoryUsage of job (MB)
+	35840  -  ResidentSetSize of job (KB)
+...
+006 (173.000.000) 2021-02-05 15:11:28 Image size of job updated: 2542672
+	38  -  MemoryUsage of job (MB)
+	38752  -  ResidentSetSize of job (KB)
+...
+040 (173.000.000) 2021-02-05 15:11:28 Started transferring output files
+...
+040 (173.000.000) 2021-02-05 15:11:28 Finished transferring output files
+...
+005 (173.000.000) 2021-02-05 15:11:28 Job terminated.
+	(1) Normal termination (return value 0)
+		Usr 0 00:04:50, Sys 0 00:00:05  -  Run Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Run Local Usage
+		Usr 0 00:04:50, Sys 0 00:00:05  -  Total Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Total Local Usage
+	6680631  -  Run Bytes Sent By Job
+	11557  -  Run Bytes Received By Job
+	6680631  -  Total Bytes Sent By Job
+	11557  -  Total Bytes Received By Job
+	Partitionable Resources :    Usage  Request Allocated 
+	   Cpus                 :     1.00        1         1 
+	   Disk (KB)            :  6538          15  16068730 
+	   Memory (MB)          :    38           1      1955 
+
+	Job terminated of its own accord at 2021-02-05T15:11:28Z.
+...
+006 (174.000.000) 2021-02-05 15:13:46 Image size of job updated: 2542160
+	33  -  MemoryUsage of job (MB)
+	33748  -  ResidentSetSize of job (KB)
+...
+040 (174.000.000) 2021-02-05 15:13:46 Started transferring output files
+...
+040 (174.000.000) 2021-02-05 15:13:46 Finished transferring output files
+...
+005 (174.000.000) 2021-02-05 15:13:46 Job terminated.
+	(1) Normal termination (return value 0)
+		Usr 0 00:04:50, Sys 0 00:00:05  -  Run Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Run Local Usage
+		Usr 0 00:04:50, Sys 0 00:00:05  -  Total Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Total Local Usage
+	6680632  -  Run Bytes Sent By Job
+	11557  -  Run Bytes Received By Job
+	6680632  -  Total Bytes Sent By Job
+	11557  -  Total Bytes Received By Job
+	Partitionable Resources :    Usage  Request Allocated 
+	   Cpus                 :     1.00        1         1 
+	   Disk (KB)            :  6538          15  16068359 
+	   Memory (MB)          :    33           1      1955 
+
+	Job terminated of its own accord at 2021-02-05T15:13:46Z.
+...
+006 (175.000.000) 2021-02-05 15:14:06 Image size of job updated: 2275912
+	35  -  MemoryUsage of job (MB)
+	35840  -  ResidentSetSize of job (KB)
+...
+040 (175.000.000) 2021-02-05 15:14:06 Started transferring output files
+...
+040 (175.000.000) 2021-02-05 15:14:06 Finished transferring output files
+...
+005 (175.000.000) 2021-02-05 15:14:06 Job terminated.
+	(1) Normal termination (return value 0)
+		Usr 0 00:04:49, Sys 0 00:00:05  -  Run Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Run Local Usage
+		Usr 0 00:04:49, Sys 0 00:00:05  -  Total Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Total Local Usage
+	6680632  -  Run Bytes Sent By Job
+	11557  -  Run Bytes Received By Job
+	6680632  -  Total Bytes Sent By Job
+	11557  -  Total Bytes Received By Job
+	Partitionable Resources :    Usage  Request Allocated 
+	   Cpus                 :     1.00        1         1 
+	   Disk (KB)            :  6538          15  16067564 
+	   Memory (MB)          :    35           1      1955 
+
+	Job terminated of its own accord at 2021-02-05T15:14:06Z.
+...
+000 (176.000.000) 2021-02-10 11:39:39 Job submitted from host: <10.42.0.73:9618?addrs=10.42.0.73-9618&alias=condor-notebook-75c45c4cbb-lmdmq&noUDP&sock=schedd_17_3d33>
+...
+040 (176.000.000) 2021-02-10 11:39:49 Started transferring input files
+	Transferring to host: <10.42.1.237:9618?addrs=10.42.1.237-9618&alias=worker-dcff657f-fcjg4&noUDP&sock=slot1_55_809b_5>
+...
+001 (176.000.000) 2021-02-10 11:39:49 Job executing on host: <10.42.1.237:9618?addrs=10.42.1.237-9618&alias=worker-dcff657f-fcjg4&noUDP&sock=startd_22_ab2c>
+...
+040 (176.000.000) 2021-02-10 11:39:49 Finished transferring input files
+...
+006 (176.000.000) 2021-02-10 11:39:59 Image size of job updated: 180712
+	32  -  MemoryUsage of job (MB)
+	32144  -  ResidentSetSize of job (KB)
+...
+006 (176.000.000) 2021-02-10 11:44:49 Image size of job updated: 2479952
+	32  -  MemoryUsage of job (MB)
+	32144  -  ResidentSetSize of job (KB)
+...
+040 (176.000.000) 2021-02-10 11:44:49 Started transferring output files
+...
+040 (176.000.000) 2021-02-10 11:44:49 Finished transferring output files
+...
+005 (176.000.000) 2021-02-10 11:44:50 Job terminated.
+	(1) Normal termination (return value 0)
+		Usr 0 00:04:49, Sys 0 00:00:05  -  Run Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Run Local Usage
+		Usr 0 00:04:49, Sys 0 00:00:05  -  Total Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Total Local Usage
+	6680632  -  Run Bytes Sent By Job
+	11557  -  Run Bytes Received By Job
+	6680632  -  Total Bytes Sent By Job
+	11557  -  Total Bytes Received By Job
+	Partitionable Resources :    Usage  Request Allocated 
+	   Cpus                 :     0.86        1         1 
+	   Disk (KB)            :  6538          15  16068730 
+	   Memory (MB)          :    32           1      1955 
+
+	Job terminated of its own accord at 2021-02-10T11:44:49Z.
+...
+009 (171.000.000) 2021-02-11 15:14:03 Job was aborted.
+	via condor_rm (by user jovyan)
+...
+000 (187.000.000) 2021-02-11 15:55:33 Job submitted from host: <10.42.0.73:9618?addrs=10.42.0.73-9618&alias=condor-notebook-75c45c4cbb-lmdmq&noUDP&sock=schedd_17_3d33>
+...
+040 (187.000.000) 2021-02-11 15:55:33 Started transferring input files
+	Transferring to host: <10.42.1.237:9618?addrs=10.42.1.237-9618&alias=worker-dcff657f-fcjg4&noUDP&sock=slot1_55_809b_15>
+...
+040 (187.000.000) 2021-02-11 15:55:33 Finished transferring input files
+...
+001 (187.000.000) 2021-02-11 15:55:33 Job executing on host: <10.42.1.237:9618?addrs=10.42.1.237-9618&alias=worker-dcff657f-fcjg4&noUDP&sock=startd_22_ab2c>
+...
+006 (187.000.000) 2021-02-11 15:55:43 Image size of job updated: 183520
+	33  -  MemoryUsage of job (MB)
+	33376  -  ResidentSetSize of job (KB)
+...
+006 (187.000.000) 2021-02-11 16:00:33 Image size of job updated: 2478288
+	33  -  MemoryUsage of job (MB)
+	33376  -  ResidentSetSize of job (KB)
+...
+040 (187.000.000) 2021-02-11 16:00:33 Started transferring output files
+...
+040 (187.000.000) 2021-02-11 16:00:33 Finished transferring output files
+...
+005 (187.000.000) 2021-02-11 16:00:33 Job terminated.
+	(1) Normal termination (return value 0)
+		Usr 0 00:04:48, Sys 0 00:00:06  -  Run Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Run Local Usage
+		Usr 0 00:04:48, Sys 0 00:00:06  -  Total Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Total Local Usage
+	6680632  -  Run Bytes Sent By Job
+	11557  -  Run Bytes Received By Job
+	6680632  -  Total Bytes Sent By Job
+	11557  -  Total Bytes Received By Job
+	Partitionable Resources :    Usage  Request Allocated 
+	   Cpus                 :     1.00        1         1 
+	   Disk (KB)            :  6538          15  16068730 
+	   Memory (MB)          :    33           1      1955 
+
+	Job terminated of its own accord at 2021-02-11T16:00:33Z.
+...
+000 (189.000.000) 2021-02-11 16:18:23 Job submitted from host: <10.42.0.73:9618?addrs=10.42.0.73-9618&alias=condor-notebook-75c45c4cbb-lmdmq&noUDP&sock=schedd_17_3d33>
+...
+040 (189.000.000) 2021-02-11 16:18:28 Started transferring input files
+	Transferring to host: <10.42.1.237:9618?addrs=10.42.1.237-9618&alias=worker-dcff657f-fcjg4&noUDP&sock=slot1_55_809b_17>
+...
+001 (189.000.000) 2021-02-11 16:18:28 Job executing on host: <10.42.1.237:9618?addrs=10.42.1.237-9618&alias=worker-dcff657f-fcjg4&noUDP&sock=startd_22_ab2c>
+...
+040 (189.000.000) 2021-02-11 16:18:28 Finished transferring input files
+...
+006 (189.000.000) 2021-02-11 16:18:30 Image size of job updated: 1
+	0  -  MemoryUsage of job (MB)
+	0  -  ResidentSetSize of job (KB)
+...
+040 (189.000.000) 2021-02-11 16:18:30 Started transferring output files
+...
+040 (189.000.000) 2021-02-11 16:18:30 Finished transferring output files
+...
+007 (189.000.000) 2021-02-11 16:18:30 Shadow exception!
+	Error from worker-dcff657f-fcjg4: STARTER at 10.42.1.237 failed to send file(s) to <10.42.0.73:9618>: error reading from /var/lib/condor/execute/dir_1338/volume: (errno 2) No such file or directory; SHADOW failed to receive file(s) from <10.42.0.1:44710>
+	1130  -  Run Bytes Sent By Job
+	11567  -  Run Bytes Received By Job
+...
+012 (189.000.000) 2021-02-11 16:18:30 Job was held.
+	Error from worker-dcff657f-fcjg4: STARTER at 10.42.1.237 failed to send file(s) to <10.42.0.73:9618>: error reading from /var/lib/condor/execute/dir_1338/volume: (errno 2) No such file or directory; SHADOW failed to receive file(s) from <10.42.0.1:44710>
+	Code 13 Subcode 2
+...
+009 (189.000.000) 2021-02-11 16:18:56 Job was aborted.
+	via condor_rm (by user jovyan)
+
+	Job terminated by itself at 2021-02-11T16:18:30Z (using method 0: OF_ITS_OWN_ACCORD).
+...

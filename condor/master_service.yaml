@@ -1,0 +1,14 @@
+# headless master svc
+apiVersion: v1
+kind: Service
+metadata:
+  name: master
+spec:
+  clusterIP: None
+  selector:
+    app: master
+  ports:
+  - name: master
+    port: 9618
+    targetPort: 9618
+    protocol: TCP

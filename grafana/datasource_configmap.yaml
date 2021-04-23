@@ -1,0 +1,18 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: grafana-datasource
+data:
+  datasource.yml: |
+    # config file version
+    apiVersion: 1
+
+    datasources:
+      # <string, required> name of the datasource. Required
+      - name: Prometheus
+        # <string, required> datasource type. Required
+        type: prometheus
+        access: proxy
+        orgId: 1
+        url: http://131.154.97.69:30909
+        isDefault: true

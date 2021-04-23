@@ -1,0 +1,61 @@
+mkdir: cannot create directory ‘errors’: File exists
+Submitting job(s).
+1 job(s) submitted to cluster 1078.
+Submitting job(s).
+1 job(s) submitted to cluster 1079.
+Submitting job(s).
+1 job(s) submitted to cluster 1080.
+Submitting job(s).
+1 job(s) submitted to cluster 1081.
+Submitting job(s).
+1 job(s) submitted to cluster 1082.
+Submitting job(s).
+1 job(s) submitted to cluster 1083.
+Submitting job(s).
+1 job(s) submitted to cluster 1084.
+Submitting job(s).
+1 job(s) submitted to cluster 1085.
+Submitting job(s).
+1 job(s) submitted to cluster 1086.
+Submitting job(s).
+1 job(s) submitted to cluster 1087.
+Submitting job(s).
+1 job(s) submitted to cluster 1088.
+Submitting job(s).
+1 job(s) submitted to cluster 1089.
+Submitting job(s).
+1 job(s) submitted to cluster 1090.
+Submitting job(s).
+1 job(s) submitted to cluster 1091.
+Submitting job(s).
+1 job(s) submitted to cluster 1092.
+Submitting job(s).
+1 job(s) submitted to cluster 1093.
+Submitting job(s).
+1 job(s) submitted to cluster 1094.
+Submitting job(s).
+1 job(s) submitted to cluster 1095.
+Submitting job(s).
+1 job(s) submitted to cluster 1096.
+Submitting job(s).
+1 job(s) submitted to cluster 1097.
+Submitting job(s).
+1 job(s) submitted to cluster 1098.
+Submitting job(s).
+1 job(s) submitted to cluster 1099.
+Submitting job(s).
+1 job(s) submitted to cluster 1100.
+Submitting job(s).
+1 job(s) submitted to cluster 1101.
+Submitting job(s).
+1 job(s) submitted to cluster 1102.
+Submitting job(s).
+1 job(s) submitted to cluster 1103.
+Submitting job(s).
+1 job(s) submitted to cluster 1104.
+Submitting job(s).
+1 job(s) submitted to cluster 1105.
+
+real	500m21.125s
+user	0m13.436s
+sys	0m22.865s

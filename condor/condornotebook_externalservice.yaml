@@ -1,0 +1,15 @@
+# headless master svc
+apiVersion: v1
+kind: Service
+metadata:
+  name: condor-external
+spec:
+  type: LoadBalancer
+  selector:
+    app: condor-notebook
+  ports:
+  - name: condor-external
+    port: 8888
+    targetPort: 8888
+    protocol: TCP
+    nodePort: 31163

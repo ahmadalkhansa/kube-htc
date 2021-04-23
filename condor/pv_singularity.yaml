@@ -1,0 +1,25 @@
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: sing-images
+spec:
+  capacity:
+    storage: 60Gi
+  storageClassName: slow
+  accessModes:
+  - ReadWriteMany
+  nfs:
+    path: /root/sing_img/images
+    server: 192.168.20.16
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: sing-images
+spec:
+  accessModes:
+    - ReadWriteMany
+  storageClassName: slow
+  resources:
+    requests:
+      storage: 60Gi

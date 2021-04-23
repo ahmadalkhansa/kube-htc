@@ -1,0 +1,22 @@
+# Persistent volume for execution file
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: condor
+spec:
+  capacity:
+    storage: 10Gi
+  accessModes:
+  - ReadWriteMany
+  persistentVolumeReclaimPolicy: Retain
+  storageClassName: local-storage
+  local:
+    path: /root/k3s_htc_prom/condor/submissions/
+  nodeAffinity:
+    required:
+      nodeSelectorTerms:
+      - matchExpressions:
+        - key: kubernetes.io/hostname
+          operator: In
+          values:
+          - k3s-htc.novalocal # watch for the local host

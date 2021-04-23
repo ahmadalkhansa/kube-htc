@@ -1,0 +1,40 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: alertmanager
+spec:
+  selector:
+    matchLabels:
+      app: alertmanager
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: alertmanager
+    spec:
+      affinity:
+        nodeAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+            nodeSelectorTerms:
+            - matchExpressions:
+              - key: k3s.io/hostname
+                operator: In
+                values:
+                - k3s-htc-clust.novalocal
+      containers:
+      - name: alertmanager
+        image: prom/alertmanager
+        ports:
+        - containerPort: 9093
+          name: alert-access
+        volumeMounts:
+        - name: alertmanager
+          mountPath: /etc/alertmanager/alertmanager.yml
+          subPath: alertmanager.yml
+      volumes:
+      - name: alertmanager
+        configMap:
+          name: alertmanager
+        
+
+

@@ -1,0 +1,62 @@
+# worker deployment
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: worker
+  labels:
+    name: worker
+spec:
+  selector:
+    matchLabels:
+      app: worker
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: worker
+    spec:
+      affinity:
+        nodeAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+            nodeSelectorTerms:
+            - matchExpressions:
+              - key: k3s.io/hostname
+                operator: NotIn
+                values:
+                - k3s-htc.novalocal 
+      containers:
+      - name: worker
+        imagePullPolicy: Always
+        image: "2281995/worker_singularity"
+        resources:
+          requests:
+            cpu: 1000m
+        volumeMounts:
+          - mountPath: "/etc/condor/config.d/"
+            name: worker
+          #- mountPath: /var/run/docker.sock
+          #  name: docker-socket
+          #  readOnly: false
+          #- mountPath: /var/lib/condor/execute
+          #  name: condor-executions
+          #  readOnly: false
+          - mountPath: /home/simages
+            name: sing-images
+        ports:
+        - containerPort: 9618
+        securityContext:
+          privileged: true
+      volumes:
+      - name: worker
+        configMap:
+          name: worker
+      #- name: docker-socket
+      #  hostPath:
+      #    path: "/var/run/docker.sock"
+      #- name: condor-executions
+      #  hostPath:
+      #    path: "/var/lib/condor/execute"
+      #    type: Directory
+      - name: sing-images
+        persistentVolumeClaim:
+          claimName: sing-images
