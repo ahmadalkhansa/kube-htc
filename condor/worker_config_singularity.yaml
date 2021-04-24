@@ -11,7 +11,7 @@ data:
     UPDATE_COLLECTOR_WITH_TCP = True
     # USED_SHARED_PORT = TRUE
     # SHARED_PORT_ARGS = -p 9618
-    DOCKER = /usr/bin/docker
+    # DOCKER = /usr/bin/docker
     # NUM_SLOTS = 1
     NUM_SLOTS_TYPE_1 = 1
     SLOT_TYPE_1 = 25%

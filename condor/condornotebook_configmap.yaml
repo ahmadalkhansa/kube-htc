@@ -8,6 +8,8 @@ data:
     CONDOR_HOST = master.default.svc.cluster.local
     DAEMON_LIST = MASTER, SCHEDD
     UPDATE_COLLECTOR_WITH_TCP = True
+    # USED_SHARED_PORT = TRUE
+    # SHARED_PORT_ARGS = -p 9618 
     # Edit paths so all state gets stored in user home directory
     LOCAL_DIR=$ENV(HOME)/.condor/local
     LOCK=$(LOCAL_DIR)/lock

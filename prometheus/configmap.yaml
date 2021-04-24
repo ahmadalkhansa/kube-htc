@@ -100,3 +100,7 @@ data:
         rules:
         - record: node_memory_percentage
           expr: (container_memory_working_set_bytes{id="/",job!="docker-cadvisor"} / container_spec_memory_limit_bytes{id="/",job!="docker-cadvisor"}) * 100
+      - name: node_cpu_percentage
+        rules:
+        - record: node_cpu_percentage
+          expr: (rate(container_cpu_usage_seconds_total{id="/"}[5m]) / 4)*100

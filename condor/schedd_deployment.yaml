@@ -40,8 +40,8 @@ spec:
         #  value: schedd.default.svc.cluster.local
         ports:
         - containerPort: 9618
-        securityContext:
-          privileged: true
+        # securityContext:
+        #   privileged: true
       volumes:
       - name: schedd
         configMap:

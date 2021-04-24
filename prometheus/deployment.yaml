@@ -31,8 +31,6 @@ spec:
         volumeMounts:
         - name: config-volume
           mountPath: /etc/prometheus
-        #      hostNetwork: true
-        #      hostPID: true
         - name: storage-volume
           mountPath: /prometheus
       volumes:

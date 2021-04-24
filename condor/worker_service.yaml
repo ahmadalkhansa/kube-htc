@@ -4,7 +4,7 @@ kind: Service
 metadata:
   name: worker
 spec:
-  # clusterIP: None
+  clusterIP: None
   selector:
     app: worker
   ports:

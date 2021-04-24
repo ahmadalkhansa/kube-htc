@@ -38,8 +38,8 @@ spec:
         ports:
         - containerPort: 9618
         - containerPort: 9118
-        securityContext:
-          privileged: true
+        # securityContext:
+        #  privileged: true
       volumes:
       - name: schedd
         configMap:

@@ -37,8 +37,8 @@ spec:
           #  name: condor
         ports:
         - containerPort: 9618
-        securityContext:
-          privileged: true
+        # securityContext:
+        #   privileged: true
         env:
         - name: MY_POD_IP
           valueFrom:

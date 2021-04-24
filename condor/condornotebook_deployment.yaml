@@ -41,8 +41,8 @@ spec:
         ports:
         - containerPort: 9618
         - containerPort: 8888
-        securityContext:
-          privileged: true
+        # securityContext:
+        #  privileged: true
       volumes:
       - name: condor-notebook
         configMap:

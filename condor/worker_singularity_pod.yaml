@@ -1,0 +1,42 @@
+# worker deployment
+apiVersion: v1
+kind: Pod
+metadata:
+  name: worker-1
+  labels:
+    name: worker
+spec:
+  affinity:
+    nodeAffinity:
+      requiredDuringSchedulingIgnoredDuringExecution:
+        nodeSelectorTerms:
+        - matchExpressions:
+          - key: k3s.io/hostname
+            operator: NotIn
+            values:
+            - k3s-htc.novalocal 
+  containers:
+  - name: worker
+    imagePullPolicy: Always
+    image: "2281995/worker_singularity"
+    resources:
+      requests:
+        cpu: 1000m
+      limits:
+        cpu: 1000m
+    volumeMounts:
+      - mountPath: "/etc/condor/config.d/"
+        name: worker
+      - mountPath: /home/simages
+        name: sing-images
+    ports:
+    - containerPort: 9618
+    securityContext:
+      privileged: true
+  volumes:
+  - name: worker
+    configMap:
+      name: worker
+  - name: sing-images
+    persistentVolumeClaim:
+      claimName: sing-images
