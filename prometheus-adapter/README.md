@@ -20,4 +20,3 @@ The adapter is an implementation of resource metrics, custom metrics and externa
 
 - get the raw value kubectl get --raw "/apis/custom.metrics.k8s.io/v1beta1/namespaces/default/Job/kubernetes-pods/condor_slot_activity_busy"
 
-- kubectl get --raw "/apis/custom.metrics.k8s.io/v1beta1/namespaces/default/Job/kubernetes-pods/condor_slot_activity_busy?machine=$(kubectl get po -l app=worker -o name)" | jq for single node try!!!
