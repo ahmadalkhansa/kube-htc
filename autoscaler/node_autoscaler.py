@@ -12,10 +12,10 @@ if __name__ == "__main__":
 	#create authorized session
 	prom = PrometheusConnect(url ="http://192.168.20.16:30909/", disable_ssl=True)
 	token = '<iam token>'
-	auth = oidc.OidcAccessToken('https://cloud-api-pub.cr.cnaf.infn.it:5000/v3', 'cnaf', 'openid',
+	auth = oidc.OidcAccessToken('<id url>', '<id provider>', '<id protocol>',
 		token,
-		project_id='be520a9af00641419710061d06dc0455', 
-		project_name='Students'
+		project_id='<project id>', 
+		project_name='<project name>'
 		)
 	sess = session.Session(auth=auth)
 	token_auth = ''
@@ -44,10 +44,10 @@ if __name__ == "__main__":
 		print("creating active session")
 		token_auth = sess.get_token()
 		print(token_auth)
-		auth = v3.token.Token('https://cloud-api-pub.cr.cnaf.infn.it:5000/v3', 
+		auth = v3.token.Token('<id url>', 
 			token_auth, 
-			project_id='be520a9af00641419710061d06dc0455', 
-			project_name='Students' 
+			project_id='<project id>', 
+			project_name='<project name>' 
 			)
 		sess = session.Session(auth=auth)
 		nova = client.Client('2.1', session=sess)
@@ -87,7 +87,7 @@ if __name__ == "__main__":
 			new_instance = "k3s-htc-clust"+removed[0]
 			print("upscaling %s" % new_instance)
 			del removed[0]
-			nova.servers.create(name=new_instance, image="c1e682f6-012d-432b-9369-95d2425a3988", flavor=nova.flavors.find(name="m1.large"), security_groups=["kube_htc"])
+			nova.servers.create(name=new_instance, image="<kubernetes instance image snapshot id>", flavor=nova.flavors.find(name="<flavor name>"), security_groups=["<list of security groups>"])
 			
 		
 		time.sleep(900)

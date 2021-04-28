@@ -46,3 +46,8 @@ The autoscalers are designed specifically for this infrastructure:
 
 - Pod Autoscaler autoscales Worker Nodes depending on their activity.
 
+# Notes:
+
+- This infrastructure is tested with K3S flavor of Kubernetes.
+
+- The cloud is OpenStack with Oidc authentication and OAuth authorization protocols.
