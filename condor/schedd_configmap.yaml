@@ -5,11 +5,8 @@ metadata:
 data:
   51-role-submit: |
     CONDOR_HOST = master.default.svc.cluster.local
-    # use ROLE: Submit
     DAEMON_LIST = MASTER, SCHEDD
     USED_SHARED_PORT = TRUE
-    # SHARED_PORT_ARGS = -p 9618
-    # UPDATE_COLLECTOR_WITH_TCP = True
 
   security: |
     SEC_DEFAULT_AUTHENTICATION = OPTIONAL
@@ -48,7 +45,6 @@ data:
 
   authorization: |
     ALLOW_DAEMON = *
-    # ALLOW_NEGOTIATOR = condor_pool@*/master.default.svc.cluster.local
     ALLOW_ADMINISTRATOR = *
     ALLOW_OWNER = *
     ALLOW_READ = *

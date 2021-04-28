@@ -9,8 +9,8 @@ spec:
   accessModes:
   - ReadWriteMany
   nfs:
-    path: /root/sing_img/images
-    server: 192.168.20.16
+    path: <path to the directory containing singularity images>
+    server: <IP address of the NFS server>
 ---
 apiVersion: v1
 kind: PersistentVolumeClaim

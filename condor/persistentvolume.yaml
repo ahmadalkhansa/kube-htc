@@ -19,4 +19,4 @@ spec:
         - key: kubernetes.io/hostname
           operator: In
           values:
-          - k3s-htc.novalocal # watch for the local host
+          - <hostname>

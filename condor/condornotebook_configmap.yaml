@@ -4,13 +4,9 @@ metadata:
   name: condor-notebook
 data:
   condor_config.local: |
-    # We want a 'personal condor'
     CONDOR_HOST = master.default.svc.cluster.local
     DAEMON_LIST = MASTER, SCHEDD
     UPDATE_COLLECTOR_WITH_TCP = True
-    # USED_SHARED_PORT = TRUE
-    # SHARED_PORT_ARGS = -p 9618 
-    # Edit paths so all state gets stored in user home directory
     LOCAL_DIR=$ENV(HOME)/.condor/local
     LOCK=$(LOCAL_DIR)/lock
     LOG=$(LOCAL_DIR)/log
@@ -54,7 +50,6 @@ data:
     SEC_ADVERTISE_SCHEDD_AUTHENTICATION_METHODS = CLAIMTOBE
 
     ALLOW_DAEMON = *
-    # ALLOW_NEGOTIATOR = condor_pool@*/master.default.svc.cluster.local
     ALLOW_ADMINISTRATOR = *
     ALLOW_OWNER = *
     ALLOW_READ = *
