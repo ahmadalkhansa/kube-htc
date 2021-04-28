@@ -11,7 +11,7 @@ from prometheus_api_client import PrometheusConnect
 if __name__ == "__main__":
 	#create authorized session
 	prom = PrometheusConnect(url ="http://192.168.20.16:30909/", disable_ssl=True)
-	token = 'eyJraWQiOiJyc2ExIiwiYWxnIjoiUlMyNTYifQ.eyJzdWIiOiI5NDc1NjA3Zi03MWEwLTRiMWUtOTM2OC1mNmJhNjExZGI0Y2IiLCJpc3MiOiJodHRwczpcL1wvaWFtLmNuYWYuaW5mbi5pdFwvIiwiZXhwIjoxNjE4ODU2NTMxLCJpYXQiOjE2MTg4NTI5MzEsImp0aSI6ImU5MWY4N2VjLTJjODEtNDAyMS1iYzcyLWQzMGZjZjZmZWY5YiIsImNsaWVudF9pZCI6IjA1NWU4MzM5LWUzYTEtNDVhMi05MDMzLTZkZGIzNmViZmE2NCJ9.HLVC0SS_8JCK12YxPNndEqqQHnnN7_ikCv80C0h8xA1HWMPeni8NzEqLk4ZXIIsozO6tgyfRxYqkS0xFOibmNi05Uch5MylO_8Vs9RQEtJSZI45lkxAU2dN_uH3JuFsH6SW1VkUCLSXvC0x6MbfnwbNRpQw79iAUHryJfs4h93s'
+	token = '<iam token>'
 	auth = oidc.OidcAccessToken('https://cloud-api-pub.cr.cnaf.infn.it:5000/v3', 'cnaf', 'openid',
 		token,
 		project_id='be520a9af00641419710061d06dc0455', 
