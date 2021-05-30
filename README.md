@@ -48,6 +48,4 @@ The autoscalers are designed specifically for this infrastructure:
 
 # Notes:
 
-- This infrastructure is tested with K3S flavor of Kubernetes.
-
 - The cloud is OpenStack with Oidc authentication and OAuth authorization protocols.
