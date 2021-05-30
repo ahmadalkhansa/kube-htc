@@ -7,10 +7,6 @@ data:
   51-role-cm: |
     CONDOR_HOST = master.default.svc.cluster.local
     DAEMON_LIST = MASTER, COLLECTOR, NEGOTIATOR
-    # use ROLE: CentralManager
-    # ALLOW_WRITE_COLLECTOR=\$(ALLOW_WRITE) schedd.default.svc.cluster.local worker.default.svc.cluster.local
-    # USED_SHARED_PORT = TRUE
-    # SHARED_PORT_ARGS = -p 9618
 
   security: |
     SEC_DEFAULT_AUTHENTICATION = OPTIONAL
@@ -49,7 +45,6 @@ data:
 
   authorization: |
     ALLOW_DAEMON = *
-    # ALLOW_NEGOTIATOR = condor_pool@*/master.default.svc.cluster.local
     ALLOW_ADMINISTRATOR = *
     ALLOW_OWNER = *
     ALLOW_READ = *
