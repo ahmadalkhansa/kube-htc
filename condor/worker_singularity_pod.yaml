@@ -11,10 +11,10 @@ spec:
       requiredDuringSchedulingIgnoredDuringExecution:
         nodeSelectorTerms:
         - matchExpressions:
-          - key: k3s.io/hostname
+          - key: kubernetes.io/hostname
             operator: NotIn
             values:
-            - k3s-htc.novalocal 
+            - k8s-htc.novalocal 
   containers:
   - name: worker
     imagePullPolicy: Always
